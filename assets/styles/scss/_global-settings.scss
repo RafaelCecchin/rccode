@@ -1,0 +1,23 @@
+/* Settings */
+
+//Breackpoints
+$small: '450px'; 
+$smartphone: '800px'; 
+$tablet: '1000px'; 
+$desktop: '1450px';
+$full: '1920px' 
+
+:root {
+	//Colors
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color-black-30: rgba(0,0,0,0.3);
+	--color-dark-gray: #121214;
+	--color-light-gray: #b8bab7;
+	--color-light-green: #42e6e0;
+	--color-light-green-10: rgba(66, 230, 224,0.1);
+
+    //Content
+    --content-max-width: 1200px;
+	--content-padding: 0 1rem;
+}
