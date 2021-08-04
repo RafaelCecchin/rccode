@@ -20,8 +20,14 @@
         <h1>Information</h1>
         <p>Use the submenus on the left to change your website information.</p>
         ';
-        
     } 
+
+    add_action('admin_init', 'add_functions');
+
+    function add_functions() {
+        // Adiciona funções gerais
+        require_once(get_stylesheet_directory().'/functions/information/functions.php');
+    }
 
     // Adiciona a página de configurações gerais
     require_once(get_stylesheet_directory().'/functions/information/general.php'); 

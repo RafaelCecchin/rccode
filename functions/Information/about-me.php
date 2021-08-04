@@ -25,65 +25,7 @@
             '', // callback function (if needed)
             'about_me' // page slug
         );
-
-        // Sobre mim - Título
-        register_setting(
-            'about_me_group_settings', // settings group name
-            'about_me_title', // option name
-            //'sanitize_text_field' // sanitization function
-        );
-
-        add_settings_field(
-            'about_me_title',
-            'Title',
-            'about_me_title_html', // function which prints the field
-            'about_me', // page slug
-            'about_me_section_settings', // section ID
-
-            array( 
-                'label_for' => 'about_me_title',
-                'class' => 'information', // for <tr> element
-            )
-        );
-
-        // Sobre mim - Texto
-        register_setting(
-            'about_me_group_settings', // settings group name
-            'about_me_text', // option name
-            //'sanitize_text_field' // sanitization function
-        );
-
-        add_settings_field(
-            'about_me_text',
-            'Text',
-            'about_me_text_html', // function which prints the field
-            'about_me', // page slug
-            'about_me_section_settings', // section ID
-
-            array( 
-                'label_for' => 'about_me_text',
-                'class' => 'information', // for <tr> element
-            )
-        );
-    }
-
-    function about_me_title_html(){
-
-        $text = get_option( 'about_me_title' );
-
-        printf(
-            '<input type="text" id="about_me_title" name="about_me_title" value="%s" />',
-            esc_attr( $text )
-        );
-    }
-
-    function about_me_text_html(){
-
-        $text = get_option( 'about_me_text' );
-
-        printf(
-            '<textarea id="about_me_text" name="about_me_text" style="resize: both; width: 350px; height: 200px;"/> %s </textarea>',
-            esc_attr( $text )
-        );
-
+        
+        create_custom_option('about_me_title', 'Title', 'text', 'about_me_section_settings', 'about_me_group_settings', 'about_me');
+        create_custom_option('about_me_text', 'Text', 'textarea', 'about_me_section_settings', 'about_me_group_settings', 'about_me');
     }

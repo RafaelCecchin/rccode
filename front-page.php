@@ -15,6 +15,7 @@
         <?php } ?>
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
         
+        <meta name="description" content="<?= get_bloginfo('description') ?>">
         
         <?php 
             function astra_force_remove_style() {
@@ -70,8 +71,8 @@
                     </div>
                 </nav>
                 <div class="social-icons">
-                    <a target="_blank" href="<?= get_option( 'linkedin_link'  ) ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/linkedin.svg"/></a>
-                    <a target="_blank" href="<?= get_option(  'whatsapp_link'  ) ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/whatsapp.svg"/></a>
+                    <a target="_blank" rel=”noopener” rel=”noreferrer” href="<?= get_option( 'linkedin_link'  ) ?>"><img alt="LinkedIn RCCODE" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/linkedin.svg"/></a>
+                    <a target="_blank" rel=”noopener” rel=”noreferrer” href="<?= get_option(  'whatsapp_link'  ) ?>"><img alt="WhatsApp RCCODE" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/whatsapp.svg"/></a>
                 </div>
             </div>
         </header>
@@ -99,7 +100,7 @@
                 <div class="content">
                     <div class="data-container">
                         <h2><?= get_option( 'about_me_title' ); ?></h2>
-                        <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/foto.png"/>
+                        <img alt="Programador Rafael Cecchin - RCCODE" src="<?= get_stylesheet_directory_uri() ?>/assets/images/foto.png"/>
                         <p><?= get_option( 'about_me_text' ); ?></p>
                     </div>
                     <div class="buttons-container">
@@ -143,7 +144,7 @@
                                 <div class="text-container"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at leo pretium, blandit lacus in, porta neque. Proin acenim id urna placerat dapibus. Curabitur vel purus sed sapien pulvinar efficitur. Sed libero felis, ultricies vitae dolor.</p></div>
                                 <button class="button not-filled">Saiba mais</button>
                             </div>
-                            <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/notebook.png"/>
+                            <img alt="Notebook thumbnail" src="<?= get_stylesheet_directory_uri() ?>/assets/images/notebook.png"/>
                             <h3>Lorem ipsun</h3>
                         </div>
 
@@ -154,7 +155,7 @@
                                 <div class="text-container"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at leo pretium, blandit lacus in, porta neque. Proin acenim id urna placerat dapibus. Curabitur vel purus sed sapien pulvinar efficitur. Sed libero felis, ultricies vitae dolor.</p></div>
                                 <button class="button not-filled">Saiba mais</button>
                             </div>
-                            <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/notebook.png"/>
+                            <img alt="Notebook thumbnail" src="<?= get_stylesheet_directory_uri() ?>/assets/images/notebook.png"/>
                             <h3>Lorem ipsun</h3>
                         </div>
 
@@ -165,7 +166,7 @@
                                 <div class="text-container"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at leo pretium, blandit lacus in, porta neque. Proin acenim id urna placerat dapibus. Curabitur vel purus sed sapien pulvinar efficitur. Sed libero felis, ultricies vitae dolor.</p></div>
                                 <button class="button not-filled">Saiba mais</button>
                             </div>
-                            <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/notebook.png"/>
+                            <img alt="Notebook thumbnail" src="<?= get_stylesheet_directory_uri() ?>/assets/images/notebook.png"/>
                             <h3>Lorem ipsun</h3>
                         </div>
 
@@ -176,7 +177,7 @@
                                 <div class="text-container"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at leo pretium, blandit lacus in, porta neque. Proin acenim id urna placerat dapibus. Curabitur vel purus sed sapien pulvinar efficitur. Sed libero felis, ultricies vitae dolor.</p></div>
                                 <button class="button not-filled">Saiba mais</button>
                             </div>
-                            <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/notebook.png"/>
+                            <img alt="Notebook thumbnail" src="<?= get_stylesheet_directory_uri() ?>/assets/images/notebook.png"/>
                             <h3>Lorem ipsun</h3>
                         </div>
                     </div>
@@ -192,7 +193,7 @@
                         </header>
                         <div class="posts-container">
                             <article class="post-container">
-                                <img class="thumb" src="<?= get_stylesheet_directory_uri() ?>/assets/images/foto.jpg"/> 
+                                <img class="thumb" alt="Post Thumbnail" src="<?= get_stylesheet_directory_uri() ?>/assets/images/foto.jpg"/> 
                                 <div class="data-container">
                                     <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at leo pretium, blandit lacus in, porta neque. Proin ac enim id urna placerat dapibus. Curabitur vel purus sed sapien pulvinar efficitur. Sed libero felis, ultricies vitae dolor...</p>
@@ -202,7 +203,7 @@
                             </article>
                             
                             <article class="post-container">
-                                <img class="thumb" src="<?= get_stylesheet_directory_uri() ?>/assets/images/foto.jpg"/> 
+                                <img class="thumb" alt="Post Thumbnail" src="<?= get_stylesheet_directory_uri() ?>/assets/images/foto.jpg"/> 
                                 <div class="data-container">
                                     <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at leo pretium, blandit lacus in, porta neque. Proin ac enim id urna placerat dapibus. Curabitur vel purus sed sapien pulvinar efficitur. Sed libero felis, ultricies vitae dolor...</p>
@@ -387,11 +388,11 @@
                                     <h3><?= get_option( 'email_title' ) ?></h3>
                                     <span><?= get_option( 'email' ) ?></span>
                                 </a>
-                                <a class="data" target="_blank" href="<?= get_option( 'whatsapp_link' ) ?>">
+                                <a class="data" rel=”noopener” rel=”noreferrer” target="_blank" href="<?= get_option( 'whatsapp_link' ) ?>">
                                     <h3><?= get_option( 'whatsapp_title' ) ?></h3>
                                     <span><?= get_option( 'whatsapp' ) ?></span>
                                 </a>
-                                <a class="data" target="_blank" href="<?= get_option( 'linkedin_link' ) ?>">
+                                <a class="data" rel=”noopener” rel=”noreferrer” target="_blank" href="<?= get_option( 'linkedin_link' ) ?>">
                                     <h3><?= get_option( 'linkedin_title' ) ?></h3>
                                     <span><?= get_option( 'linkedin' ) ?></span>
                                 </a>

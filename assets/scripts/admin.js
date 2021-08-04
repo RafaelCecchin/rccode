@@ -2,7 +2,7 @@
     //Adicionar mensagens
 
     let messages;
-
+    
     if ($('.message-option').length) {
         $.ajax({
             type: "POST",
@@ -41,16 +41,16 @@
 
     // Logo
 
-    if ($('.logo-option').length > 0) {
+    if ($('.image-option').length > 0) {
 
         // Select logo
 
-        $('.logo-option .select-image').on('click', function(e) {
+        $('.image-option .select-image').on('click', function(e) {
             var button = $(this);
             var input = button.prev();
 
             const file_frame = wp.media({
-                title: 'Logo',
+                title: 'Imagem',
                 button: {
                     text: 'Select',
                 },
@@ -66,8 +66,8 @@
                 
                 input.val(attachment.id);
 
-                $('.logo-option .select-image').html('Update image');
-                $('.logo-option .remove-image').addClass('open');
+                $('.image-option .select-image').html('Update image');
+                $('.image-option .remove-image').addClass('open');
 
                 
             });
@@ -83,10 +83,10 @@
             file_frame.open();
         });
 
-        $(document).on('click', '.logo-option .remove-image', function() {
-            $('.logo-option .logo').val('');
-            $('.logo-option .select-image').html('Select image');
-            $('.logo-option .remove-image').removeClass('open');
+        $(document).on('click', '.image-option .remove-image', function() {
+            $('.image-option .logo').val('');
+            $('.image-option .select-image').html('Select image');
+            $('.image-option .remove-image').removeClass('open');
         });
     }
 

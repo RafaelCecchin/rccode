@@ -38,7 +38,7 @@ add_action('wp_enqueue_scripts', 'site_scripts', 15);
 
 function admin_scripts() {
   // Adding admin file in the footer
-  wp_enqueue_script( 'admin-js', get_stylesheet_directory_uri() . '/assets/scripts/admin.js', false, true );
+  wp_enqueue_script( 'admin-js', get_stylesheet_directory_uri() . '/assets/scripts/admin.js', array( 'jquery' ), true, true );
   wp_enqueue_media();
 
   // Register admin stylesheet
