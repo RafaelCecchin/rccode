@@ -20,17 +20,8 @@
     add_action('admin_init', 'register_home_settings'); 
 
     function register_home_settings() {
-        // Adicionar sessão mensagens
-        add_settings_section(
-            'messages_section_settings',
-            '',
-            '', 
-            'home'
-        );
-
-        // Adiciona configuração de mensagens
-
-        create_custom_option('message', 'Message', 'arraytext', 'messages_section_settings', 'home_group_settings', 'home');
+        $messages_section = new CustomSection('messages_section_settings', '', 'home');
+        $messages_section->create_custom_option('message', 'Message', 'arraytext', 'home_group_settings');
     }
 
     

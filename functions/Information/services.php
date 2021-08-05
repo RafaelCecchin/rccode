@@ -18,21 +18,21 @@
 
     function register_services_settings() {
         // Adiciona a sessão principal
-        add_settings_section('services_section_settings', '', '', 'services');
-        create_custom_option('services_title', 'Title', 'text', 'services_section_settings', 'services_group_settings', 'services');
+        $main_section = new CustomSection('services_section_settings', '', 'services');
+        $main_section->create_custom_option('services_title', 'Title', 'text', 'services_group_settings');
 
         // Adiciona a sessão 1
-        add_settings_section('services_box1_settings', 'First box', '', 'services');
-        create_custom_option('services_box1_title', 'Title', 'text', 'services_box1_settings', 'services_group_settings', 'services');
-        create_custom_option('services_box1_text', 'Text', 'textarea', 'services_box1_settings', 'services_group_settings', 'services');
+        $box1_section = new CustomSection('services_box1_settings', 'First box', 'services');
+        $box1_section->create_custom_option('services_box1_title', 'Title', 'text', 'services_group_settings');
+        $box1_section->create_custom_option('services_box1_text', 'Text', 'textarea', 'services_group_settings');
 
         // Adiciona a sessão 2
-        add_settings_section('services_box2_settings', 'Second box', '', 'services');
-        create_custom_option('services_box2_title', 'Title', 'text', 'services_box2_settings', 'services_group_settings', 'services');
-        create_custom_option('services_box2_text', 'Text', 'textarea', 'services_box2_settings', 'services_group_settings', 'services');
+        $box2_section = new CustomSection('services_box2_settings', 'Second box', 'services');
+        $box2_section->create_custom_option('services_box2_title', 'Title', 'text', 'services_group_settings');
+        $box2_section->create_custom_option('services_box2_text', 'Text', 'textarea', 'services_group_settings');
 
         // Adiciona a sessão 3
-        add_settings_section('services_box3_settings', 'Third box', '', 'services');
-        create_custom_option('services_box3_title', 'Title', 'text', 'services_box3_settings', 'services_group_settings', 'services');
-        create_custom_option('services_box3_text', 'Text', 'textarea', 'services_box3_settings', 'services_group_settings', 'services');
+        $box3_section = new CustomSection('services_box3_settings', 'Third box', 'services');
+        $box3_section->create_custom_option('services_box3_title', 'Title', 'text', 'services_group_settings');
+        $box3_section->create_custom_option('services_box3_text', 'Text', 'textarea', 'services_group_settings');
     }

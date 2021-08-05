@@ -17,21 +17,6 @@
     add_action('admin_init', 'register_general_settings');
 
     function register_general_settings() {
-        // Adicionar sessão geral
-        add_settings_section(
-            'general_section_settings',
-            '',
-            '',
-            'general'
-        ); 
-
-        // Adiciona configuração de logo
-
-        register_setting(
-            'home_general_settings', // settings group name
-            'logo', // option name
-            //'' // sanitization function
-        );
-
-        create_custom_option('logo', 'Logo', 'image', 'general_section_settings', 'general_group_settings', 'general');
+        $general_section = new CustomSection('general_section_settings', '', 'general');
+        $general_section->create_custom_option('logo', 'Logo', 'image', 'general_group_settings');
     }

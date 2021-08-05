@@ -128,6 +128,35 @@
         }
     }
 
+    class CustomSection {
+        private $name;
+        private $title;
+        private $page;
+
+        public function __construct($name, $title, $page) {
+            $this->name = $name;
+            $this->title = $title;
+            $this->page = $page;
+
+            $this->create_section();
+        }
+
+        private function create_section() {
+            add_settings_section(
+                $this->name, // section ID
+                $this->title, // title (if needed)
+                '', // callback function (if needed)
+                $this->page // page slug
+            );
+        }
+
+        public function create_custom_option($name, $title, $type, $group, $sanitization_function = null) {
+
+            $obj = new CustomOption($name, $title, $type, $this->name, $group, $this->page, $sanitization_function = null);
+
+        }
+    }
+
     function return_message_html($value = '') {
         $message_html = '<span class="message"><input type="text" id="message" name="message[]" value="'.esc_attr( $value ).'" /><span class="button up-message">↑</span><span class="button down-message">↓</span><span class="rem-message">—</span></span>';
 

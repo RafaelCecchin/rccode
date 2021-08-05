@@ -1,7 +1,7 @@
 <?php
 
     function register_information_cm() {
-        add_menu_page('Informações', 'Information', 'manage_options', 'information', 'display_information_menu', 'dashicons-pressthis');
+        add_menu_page('Information', 'Information', 'manage_options', 'information', 'display_information_menu', 'dashicons-pressthis');
         add_submenu_page( 'information', 'General', 'General', 'manage_options', 'general', 'display_general_submenu', 1);
         add_submenu_page( 'information', 'Home', 'Home', 'manage_options', 'home', 'display_home_submenu', 2);
         add_submenu_page( 'information', 'About me', 'About me', 'manage_options', 'about_me', 'display_about_me_submenu', 3);
