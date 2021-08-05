@@ -28,4 +28,5 @@
         
         create_custom_option('about_me_title', 'Title', 'text', 'about_me_section_settings', 'about_me_group_settings', 'about_me');
         create_custom_option('about_me_text', 'Text', 'textarea', 'about_me_section_settings', 'about_me_group_settings', 'about_me');
+        create_custom_option('about_me_image', 'Image', 'image', 'about_me_section_settings', 'about_me_group_settings', 'about_me');
     }

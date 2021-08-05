@@ -729,7 +729,8 @@ body {
 				img {
 					float: left;
 					width: 40%;
-
+					height: auto;
+					
 					@media screen and (max-width: $smartphone) {
 					
 					}
