@@ -46,8 +46,9 @@
         // Select logo
 
         $('.image-option .select-image').on('click', function(e) {
-            var button = $(this);
-            var input = button.prev();
+            let select = $(this);
+            let remove = select.next();
+            let input = select.prev();
 
             const file_frame = wp.media({
                 title: 'Imagem',
@@ -66,14 +67,12 @@
                 
                 input.val(attachment.id);
 
-                $('.image-option .select-image').html('Update image');
-                $('.image-option .remove-image').addClass('open');
-
-                
+                select.html('Update image');
+                remove.addClass('open');
             });
 
             file_frame.on( 'open', function() {
-                var selection = file_frame.state().get('selection');
+                let selection = file_frame.state().get('selection');
 
                 attachment = wp.media.attachment(input.val());
                 attachment.fetch();
@@ -84,9 +83,13 @@
         });
 
         $(document).on('click', '.image-option .remove-image', function() {
-            $('.image-option .logo').val('');
-            $('.image-option .select-image').html('Select image');
-            $('.image-option .remove-image').removeClass('open');
+            let remove = $(this);
+            let select = remove.prev();
+            let input = remove.prev().prev();
+
+            input.val('');
+            select.html('Select image');
+            remove.removeClass('open');
         });
     }
 
