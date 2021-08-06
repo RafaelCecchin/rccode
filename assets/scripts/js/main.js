@@ -45,8 +45,15 @@
         $('.header nav ul a').on('click', function(e) {
             e.preventDefault();
             let id = $(this).attr('href');
+
+            if (window.location.pathname != '/') {
+                window.location.assign(window.location.origin+id);
+            }
+
             let targetOffset = $(id).offset().top;
             
+
+
             if (id=="#blog-home") {
                 targetOffset += 180;
             }
@@ -125,43 +132,46 @@
         }, true);
 
         /* ALTERAR A COR DO BOTÃO TOPO NAS DIFERENTES SESSÕES */
+        if (window.location.pathname == '/') {
+            let home = 0;
+            let servicos = $('#sobre').offset().top - 60;
+            let portfolio = $('#servicos').offset().top - 300;
+            let blog = $('#portfolio-home').offset().top - 150;
+            let contato = $('#blog-home').offset().top + 220;
+    
+            document.addEventListener('scroll', function () {
+                
+                if ($(this).scrollTop() > contato) {
+                    $('.topo').removeClass('black');
+                    $('.topo').addClass('white');
+                } else if ($(this).scrollTop() > blog) {
+                    $('.topo').removeClass('white');
+                    $('.topo').addClass('black');
+                } else if ($(this).scrollTop() > portfolio) {
+                    $('.topo').removeClass('black');
+                    $('.topo').addClass('white');
+                } else if ($(this).scrollTop() > servicos) {
+                    $('.topo').removeClass('black');
+                    $('.topo').addClass('white');
+                } else {
+                    $('.topo').removeClass('black');
+                    $('.topo').addClass('white');
+                } 
+            }, true);
+        
 
-        let home = 0;
-        let servicos = $('#sobre').offset().top - 60;
-        let portfolio = $('#servicos').offset().top - 300;
-        let blog = $('#portfolio-home').offset().top - 150;
-        let contato = $('#blog-home').offset().top + 220;
+            /* EFEITO DO MENU DE CONTATO */
 
-        document.addEventListener('scroll', function () {
-            
-            if ($(this).scrollTop() > contato) {
-                $('.topo').removeClass('black');
-                $('.topo').addClass('white');
-            } else if ($(this).scrollTop() > blog) {
-                $('.topo').removeClass('white');
-                $('.topo').addClass('black');
-            } else if ($(this).scrollTop() > portfolio) {
-                $('.topo').removeClass('black');
-                $('.topo').addClass('white');
-            } else if ($(this).scrollTop() > servicos) {
-                $('.topo').removeClass('black');
-                $('.topo').addClass('white');
-            } else {
-                $('.topo').removeClass('black');
-                $('.topo').addClass('white');
-            } 
-        }, true);
+            let suporte = $('#contato svg').offset().top + 100;
 
-        /* EFEITO DO MENU DE CONTATO */
+            document.addEventListener('scroll', function () {
 
-        let suporte = $('#contato svg').offset().top + 100;
+                if ($(this).scrollTop() > contato) {
+                    $('#contato .suporte').addClass('opened');
+                }
+            });
 
-        document.addEventListener('scroll', function () {
-
-            if ($(this).scrollTop() > contato) {
-                $('#contato .suporte').addClass('opened');
-            }
-        });
+        }
 
     });    
 })(jQuery);

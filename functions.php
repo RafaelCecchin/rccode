@@ -64,3 +64,17 @@ require_once(get_stylesheet_directory().'/functions/information/information.php'
 
 // Portfólio
 require_once(get_stylesheet_directory().'/functions/portfolio/portfolio.php'); 
+
+
+function rccode_get_custom_header() {
+  require_once(get_stylesheet_directory().'/custom-header.php'); 
+}
+
+function rccode_get_custom_footer() {
+  require_once(get_stylesheet_directory().'/custom-footer.php'); 
+}
+
+function rccode_get_custom_archive() {
+  require_once(get_stylesheet_directory().'/custom-archive.php'); 
+}
+
