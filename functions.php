@@ -61,3 +61,6 @@ register_nav_menus(
 
 // Informações
 require_once(get_stylesheet_directory().'/functions/information/information.php'); 
+
+// Portfólio
+require_once(get_stylesheet_directory().'/functions/portfolio/portfolio.php'); 
