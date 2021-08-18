@@ -78,3 +78,6 @@ function rccode_get_custom_archive() {
   require_once(get_stylesheet_directory().'/custom-archive.php'); 
 }
 
+function rccode_get_custom_single() {
+  require_once(get_stylesheet_directory().'/custom-single.php'); 
+}

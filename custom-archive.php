@@ -12,27 +12,15 @@
         ?>
         <div class="posts<?= !($paged)?' first':'' ?>">
             <h2 class="only-semantics">Posts</h2>
-                <?php if ( $loop->have_posts() ) {
-                    while ( $loop->have_posts() ) {
-                        $loop->the_post();
-                        ?>
-                            <article class="post">
-                                <a class="thumb-container" rel="noopener" rel="noreferrer" href="<?= the_permalink() ?>"  title="<?php the_title_attribute(); ?>">
-                                    <?php
-                                    
-                                        if (has_post_thumbnail()) {
-                                            the_post_thumbnail(get_the_ID(), "full");
-                                        } else { 
-                                            echo '<img src="'.get_stylesheet_directory_uri().'/assets/images/default-image.jpg"/>';
-                                        }                            
-                                     ?>
-                                </a>
-                                <a class="title-container" rel="noopener" rel="noreferrer" href="<?= the_permalink() ?>"> <h2><?= esc_html( get_the_title() ) ?></h2></a>
-                            </article>
-                        <?php
-                    }
-                }
-            ?>
+                <?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
+            
+                <!-- To see additional archive styles, visit the /parts directory -->
+                <?php get_template_part( 'parts/loop', 'custom-archive' );	?>
+                <?php endwhile; ?>	
+                <?php else : ?>
+                    <?php get_template_part( 'parts/content', 'missing' ); ?>
+                <?php endif; ?>	
+
         </div>
         <div class="paginate-links">
             <?php
