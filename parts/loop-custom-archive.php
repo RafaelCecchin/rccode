@@ -9,5 +9,5 @@
             }                            
             ?>
     </a>
-    <a class="title-container" rel="noopener" rel="noreferrer" href="<?= the_permalink() ?>"> <h2><?= esc_html( get_the_title() ) ?></h2></a>
+    <a class="title-container" rel="noopener" rel="noreferrer" href="<?= the_permalink() ?>"> <h3><?= esc_html( get_the_title() ) ?></h3></a>
 </article>

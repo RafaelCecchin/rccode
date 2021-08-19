@@ -35,7 +35,7 @@
             'hierarchical'       => false,
             'menu_position'      => null,
             'menu_icon'          => 'dashicons-images-alt2',
-            'supports'           => array('title', 'editor', 'thumbnail', 'custom-fields'),
+            'supports'           => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
         ]);
     }
     add_action('init', 'register_portfolio_cpt', 1);
@@ -58,15 +58,17 @@
                 $query->the_post();
                 
                 $titulo = esc_html( get_the_title() );
-                $link = esc_html( get_the_content() );
-                $thumb = esc_html( get_the_post_thumbnail(get_the_ID(), "full") );
+                $link = esc_html( get_the_permalink() );
+                $thumb = get_the_post_thumbnail(get_the_ID(), "full");
                 $resumo = esc_html( get_the_excerpt() );
+                $imagem_destaque = wp_get_attachment_image(esc_attr(get_field('imagem_destaque'), 'full'));
                 
                 $projetos[] = [
-                    'titulo'     => $titulo,
-                    'link'       => $link,
-                    'thumb'      => $thumb,
-                    'resumo'     => $resumo
+                    'titulo'            => $titulo,
+                    'link'              => $link,
+                    'thumb'             => $thumb,
+                    'resumo'            => $resumo,
+                    'imagem_destaque'   => $imagem_destaque
                 ];
             }
         }

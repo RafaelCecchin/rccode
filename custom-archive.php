@@ -10,7 +10,7 @@
                 'post_type'         => get_post_type()
             )); 
         ?>
-        <div class="posts<?= !($paged)?' first':'' ?>">
+        <section class="posts<?= !($paged)?' first':'' ?>">
             <h2 class="only-semantics">Posts</h2>
                 <?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
             
@@ -21,8 +21,9 @@
                     <?php get_template_part( 'parts/content', 'missing' ); ?>
                 <?php endif; ?>	
 
-        </div>
-        <div class="paginate-links">
+        </section>
+        <section class="paginate-links">
+            <h2 class="only-semantics">Paginação</h2>
             <?php
                 $big = 999999999;
                 
@@ -35,6 +36,6 @@
                     'next_text' => ''
                 ) );
             ?>
-        </div>
+        </section>
     </div>
 </section>

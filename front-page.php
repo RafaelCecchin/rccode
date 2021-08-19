@@ -74,7 +74,9 @@
                             <div class="text-container"><p><?= $projeto['resumo'] ?></p></div>
                             <a class="button not-filled" href="<?= $projeto['link'] ?>">Saiba mais</a>
                         </div>
-                        <img alt="Notebook thumbnail" src="<?= get_stylesheet_directory_uri() ?>/assets/images/notebook.png"/>
+                        <a class="image-container" href="<?= $projeto['link'] ?>">
+                            <?= $projeto['imagem_destaque'] ?>
+                        </a>
                         <h3><?= $projeto['titulo'] ?></h3>
                     </article>
 
