@@ -18,7 +18,7 @@
 
     function register_about_me_settings() {
         $about_section = new CustomSection('about_me_section_settings', '', 'about_me');
-        $about_section->create_custom_option('about_me_title', 'Title', 'text', 'about_me_section_settings', 'about_me_group_settings', 'about_me');
-        $about_section->create_custom_option('about_me_text', 'Text', 'textarea', 'about_me_section_settings', 'about_me_group_settings', 'about_me');
-        $about_section->create_custom_option('about_me_image', 'Image', 'image', 'about_me_section_settings', 'about_me_group_settings', 'about_me');
+        $about_section->create_custom_option('about_me_title', 'Title', 'text', 'about_me_group_settings', 'about_me');
+        $about_section->create_custom_option('about_me_text', 'Text', 'textarea', 'about_me_group_settings', 'about_me');
+        $about_section->create_custom_option('about_me_image', 'Image', 'image', 'about_me_group_settings', 'about_me');
     }
