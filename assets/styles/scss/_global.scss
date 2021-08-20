@@ -239,13 +239,17 @@ body {
 				display: none;
 				position: absolute;
 				right: 1.5rem;
-				top: 50%;
+				top: 5rem;
 				transform: translateY(-.5rem);
 				height: 1rem;
 				width: 4rem;
 				flex-direction: column;
 				z-index: 101;
 				cursor: pointer;
+
+				@media screen and (max-width: $smartphone) {
+					top: 4rem;
+				}
 
 				.stick-container {
 					position: relative;
@@ -280,7 +284,9 @@ body {
 					height: 4rem;
 					transform: translateY(-2rem);
 					transition: 1s;
-
+					position: fixed;
+					
+					
 					.stick {
 						
 						&:first-of-type {
