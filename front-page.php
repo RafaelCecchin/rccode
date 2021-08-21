@@ -22,7 +22,7 @@
             <div class="content">
                 <div class="data-container">
                     <h2><?= get_option( 'about_me_title' ); ?></h2>
-                    <?= wp_get_attachment_image(get_option('about_me_image')); ?>
+                    <?= wp_get_attachment_image(get_option('about_me_image'), 'full'); ?>
                     <p><?= get_option( 'about_me_text' ); ?></p>
                 </div>
                 <div class="buttons-container">
