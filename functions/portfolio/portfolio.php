@@ -61,7 +61,7 @@
                 $link = esc_html( get_the_permalink() );
                 $thumb = get_the_post_thumbnail(get_the_ID(), "full");
                 $resumo = esc_html( get_the_excerpt() );
-                $imagem_destaque = wp_get_attachment_image(esc_attr(get_field('imagem_destaque'), 'full'));
+                $imagem_destaque = wp_get_attachment_image(esc_attr(get_field('imagem_destaque')), 'full');
                 
                 $projetos[] = [
                     'titulo'            => $titulo,
