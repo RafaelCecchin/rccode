@@ -61,6 +61,23 @@ function new_excerpt_more($more) {
 }
 add_filter('excerpt_more','new_excerpt_more',11);
 
+function new_link_custom_logo($html) {
+
+  if (!is_front_page()) {
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $html = sprintf( '<a href="%1$s" class="custom-logo-link" rel="home" itemprop="url">%2$s</a>',
+            esc_url( get_permalink( get_option( 'page_for_posts' ) ) ),
+            wp_get_attachment_image( $custom_logo_id, 'full', false, array(
+                'class'    => 'custom-logo',
+            ) )
+    );
+  }
+  
+  return $html;   
+} 
+
+add_filter( 'get_custom_logo', 'new_link_custom_logo' );
+
 // Informações
 require_once(get_stylesheet_directory().'/functions/information/information.php'); 
 
