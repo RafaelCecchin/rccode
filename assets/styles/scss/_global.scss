@@ -1208,7 +1208,6 @@ body {
 
 						.thumb {
 							width: 40%;
-							height: 100%;
 							object-fit: cover;
 							max-height: 17rem;
 
@@ -1261,9 +1260,10 @@ body {
 								font-weight: 700;
 							}
 
-							button {
+							.button {
 								margin: auto 0 0 auto;
 								color: var(--color-white);
+
 								&:focus, &:hover {
 									border-color: var(--color-dark-gray);
 									background-color: var(--color-dark-gray);

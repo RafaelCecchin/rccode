@@ -48,17 +48,18 @@ function admin_scripts() {
 
 add_action('admin_enqueue_scripts', 'admin_scripts', 16);
 
-
-
-
-
 register_nav_menus(
 	array(
 		'frontpage-nav'		=> 'Página inicial',		// Main nav in header
 	)
 );
 
-
+function new_excerpt_more($more) {
+  global $post;
+  remove_filter('excerpt_more', 'new_excerpt_more'); 
+  return '...';
+}
+add_filter('excerpt_more','new_excerpt_more',11);
 
 // Informações
 require_once(get_stylesheet_directory().'/functions/information/information.php'); 

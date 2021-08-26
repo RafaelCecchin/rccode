@@ -87,6 +87,11 @@
         </section>
         <?php } ?>
 
+        <?php
+            $posts = get_posts(array('numberposts' => 2));
+
+            if (!empty($posts)) {
+        ?>
         <section id="blog-home">
             <div class="content">
                 <h2>Blog</h2>
@@ -96,30 +101,26 @@
                         <a class="view-all" href="<?= get_permalink( get_option( 'page_for_posts' ) ); ?>">Ver tudo</a>
                     </header>
                     <div class="posts-container">
+
+                        <?php foreach ($posts as $post) { ?>
+
                         <article class="post-container">
-                            <img class="thumb" alt="Post Thumbnail" src="<?= get_stylesheet_directory_uri() ?>/assets/images/foto.jpg"/> 
+                            <?= get_the_post_thumbnail($post->ID, 'full', array('class'=>'thumb'))  ?> 
                             <div class="data-container">
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at leo pretium, blandit lacus in, porta neque. Proin ac enim id urna placerat dapibus. Curabitur vel purus sed sapien pulvinar efficitur. Sed libero felis, ultricies vitae dolor...</p>
-                                <span>21, set 2001</span>
-                                <button class="button fill">SAIBA MAIS</button>
+                                <h4><?= $post->post_title ?></h4>
+                                <p><?= get_the_excerpt($post->ID) ?></p>
+                                <span><?= get_the_date("d \d\\e M, Y", $post->ID) ?></span>
+                                <a class="button fill" href="<?= get_permalink($post->ID) ?>">SAIBA MAIS</a>
                             </div>
                         </article>
-                        
-                        <article class="post-container">
-                            <img class="thumb" alt="Post Thumbnail" src="<?= get_stylesheet_directory_uri() ?>/assets/images/foto.jpg"/> 
-                            <div class="data-container">
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at leo pretium, blandit lacus in, porta neque. Proin ac enim id urna placerat dapibus. Curabitur vel purus sed sapien pulvinar efficitur. Sed libero felis, ultricies vitae dolor...</p>
-                                <span>21, set 2001</span>
-                                <button class="button fill">SAIBA MAIS</button>
-                            </div>
-                        </article>
-                        
+
+                        <?php } ?>                        
                     </div>
                 </section>
             </div>
         </section>
+        <?php } ?>
+
         <section id="contato">
             <div class="content">
                 <h2>Contato</h2>
