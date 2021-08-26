@@ -596,6 +596,13 @@ body {
 						stroke-dashoffset: 12000;
 						fill: transparent;
 						animation: trailWrite 45s ease-in-out infinite;
+
+						@media screen and (max-width: $small) {
+							animation: unset;
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-green)) opacity(.09);
+							stroke-dasharray: 12000;
+    						stroke-dashoffset: 1000;
+						}
 					}
 
 					.square-edge {
