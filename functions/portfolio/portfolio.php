@@ -45,7 +45,6 @@
         $args = [
             'post_type'     => 'portfolio',
             'post_status'   => 'publish',
-            'orderby'       => 'title',
             'order'         => 'DESC',
             'posts_per_page' => $quantidade?$quantidade:999999,
         ];
