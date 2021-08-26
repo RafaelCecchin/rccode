@@ -71,8 +71,8 @@
                     </div>
                 </nav>
                 <div class="social-icons">
-                    <a target="_blank" rel=”noopener” rel=”noreferrer” href="<?= get_option( 'linkedin_link'  ) ?>"><img alt="LinkedIn RCCODE" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/linkedin.svg"/></a>
-                    <a target="_blank" rel=”noopener” rel=”noreferrer” href="<?= get_option(  'whatsapp_link'  ) ?>"><img alt="WhatsApp RCCODE" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/whatsapp.svg"/></a>
+                    <a target="_blank" rel=”noopener” rel=”noreferrer” href="<?= get_option( 'linkedin_link'  ) ?>"><img title="LinkedIn RCCODE" alt="LinkedIn RCCODE" width="34px" height="34px" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/linkedin.svg"/></a>
+                    <a target="_blank" rel=”noopener” rel=”noreferrer” href="<?= get_option(  'whatsapp_link'  ) ?>"><img title="WhatsApp RCCODE" alt="WhatsApp RCCODE" width="34px" height="34px" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/whatsapp.svg"/></a>
                 </div>
             </div>
         </header>
