@@ -105,9 +105,11 @@
                         <?php foreach ($posts as $post) { ?>
 
                         <article class="post-container">
-                            <?= get_the_post_thumbnail($post->ID, 'full', array('class'=>'thumb'))  ?> 
+                            <a class="thumb-container" href="<?= get_permalink($post->ID) ?>">
+                                <?= get_the_post_thumbnail($post->ID, 'full', array('class'=>'thumb'))  ?> 
+                            </a>    
                             <div class="data-container">
-                                <h4><?= $post->post_title ?></h4>
+                                <a href="<?= get_permalink($post->ID) ?>"><h4><?= $post->post_title ?></h4></a>
                                 <p><?= get_the_excerpt($post->ID) ?></p>
                                 <span><?= get_the_date("d \d\\e M, Y", $post->ID) ?></span>
                                 <a class="button fill" href="<?= get_permalink($post->ID) ?>">SAIBA MAIS</a>

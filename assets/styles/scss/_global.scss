@@ -1212,21 +1212,23 @@ body {
 							flex-direction: column;
 						}
 						
-
-						.thumb {
+						.thumb-container {
 							width: 40%;
-							object-fit: cover;
-							max-height: 17rem;
-
+							
 							@media screen and (max-width: $smartphone) {
 								width: 100%;
 							}
 
-							@media screen and (max-width: $small) {
-								max-height: 14rem;
+							.thumb {
+								width: 100%;
+								object-fit: cover;
+								max-height: 17rem;
+	
+								@media screen and (max-width: $small) {
+									max-height: 14rem;
+								}
 							}
 						}
-						
 
 						.data-container {
 							display: flex;
@@ -1238,16 +1240,20 @@ body {
 								width: 100%;
 							}
 
-							h4 {
-								font-size: 1.5rem;
-								font-weight: 900;
+							a {
+								text-decoration: none;
+								h4 {
+									font-size: 1.5rem;
+									font-weight: 900;
+									color: var(--color-black);
 
-								@media screen and (max-width: $smartphone) {
-									font-size: 1.4rem;
-								}
-			
-								@media screen and (max-width: $small) {
-									font-size: 1.3rem;
+									@media screen and (max-width: $smartphone) {
+										font-size: 1.4rem;
+									}
+				
+									@media screen and (max-width: $small) {
+										font-size: 1.3rem;
+									}
 								}
 							}
 
