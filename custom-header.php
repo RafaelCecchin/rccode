@@ -15,8 +15,6 @@
         <?php } ?>
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
         
-        <meta name="description" content="<?= get_bloginfo('description') ?>">
-        
         <?php 
             function astra_force_remove_style() {
                 add_filter( 'print_styles_array', function($styles) {
