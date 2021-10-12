@@ -19,16 +19,17 @@ function site_scripts() {
         
     // Adding scripts file in the footer
     
-    wp_enqueue_script( 'typewrite-js', get_stylesheet_directory_uri() . '/assets/scripts/typewrite.min.js', array( 'jquery' ), false, true );
-    wp_enqueue_script( 'slick-js', get_stylesheet_directory_uri() . '/assets/scripts/slick.min.js', array( 'jquery' ), false, true );
-    wp_enqueue_script( 'jqueryui-js', get_stylesheet_directory_uri() . '/assets/scripts/jquery-ui.min.js', array( 'jquery' ), false, true );
-    wp_enqueue_script( 'site-js', get_stylesheet_directory_uri() . '/assets/scripts/scripts.js', array( 'jquery', 'jqueryui-js' ), false, true );
+    wp_enqueue_script( 'typewrite', get_stylesheet_directory_uri() . '/assets/scripts/typewrite.min.js', array( 'jquery' ), false, true );
+    wp_enqueue_script( 'slick', get_stylesheet_directory_uri() . '/assets/scripts/slick.min.js', array( 'jquery' ), false, true );
+    wp_enqueue_script( 'jqueryui', get_stylesheet_directory_uri() . '/assets/scripts/jquery-ui.min.js', array( 'jquery' ), false, true );
+    wp_enqueue_script( 'site', get_stylesheet_directory_uri() . '/assets/scripts/scripts.js', array( 'jquery', 'jqueryui' ), false, true );
 
     // Register main stylesheet
-    wp_enqueue_style( 'wordpress-css', get_stylesheet_directory_uri() . '/assets/styles/wordpress-core.css', array(), false, 'all' );
-    wp_enqueue_style( 'site-css', get_stylesheet_directory_uri() . '/assets/styles/style.css', array(), false, 'all' );
-    wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/assets/styles/slick.css', array(), false, 'all' );
-    wp_enqueue_style( 'slick-theme-css', get_stylesheet_directory_uri() . '/assets/styles/slick-theme.css', array(), false, 'all' );
+    wp_enqueue_style( 'wordpress', get_stylesheet_directory_uri() . '/assets/styles/wordpress-core.css', array(), false, 'all' );
+    wp_enqueue_style( 'site', get_stylesheet_directory_uri() . '/assets/styles/style.css', array(), false, 'all' );
+    wp_enqueue_style( 'slick', get_stylesheet_directory_uri() . '/assets/styles/slick.css', array(), false, 'all' );
+    wp_enqueue_style( 'slick-theme', get_stylesheet_directory_uri() . '/assets/styles/slick-theme.css', array(), false, 'all' );
+    wp_enqueue_style( 'theme', get_stylesheet_directory_uri() . '/style.css', array(), false, 'all' );
 
     // Comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
