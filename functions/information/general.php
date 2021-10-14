@@ -3,7 +3,7 @@
     function display_general_submenu() {
 
         echo '<div class="wrap">
-        <h1>General</h1>
+        <h1>Configurações gerais</h1>
         <form method="post" action="options.php">';
                 
             settings_fields( 'general_group_settings' ); // settings group name

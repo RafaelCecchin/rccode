@@ -21,7 +21,7 @@
 
     function register_home_settings() {
         $messages_section = new CustomSection('messages_section_settings', '', 'home');
-        $messages_section->create_custom_option('message', 'Message', 'arraytext', 'home_group_settings');
+        $messages_section->create_custom_option('message', 'Mensagem', 'arraytext', 'home_group_settings');
     }
 
     
