@@ -52,7 +52,7 @@ h2 {
 
 
 .button {
-	border: 3px solid var(--color-light-green);
+	border: 3px solid var(--color-light-blue);
 	border-radius: .6rem;
 	text-transform: uppercase;
 	width: fit-content;
@@ -64,23 +64,23 @@ h2 {
 
 	@media screen and (max-width: $smartphone) {
 		font-size: 1.6rem;
-		border: 2px solid var(--color-light-green);
+		border: 2px solid var(--color-light-blue);
 	}
 
 	@media screen and (max-width: $small) {
-		border: 1px solid var(--color-light-green);
+		border: 1px solid var(--color-light-blue);
 		font-size: 1.1rem;
 	}
 
 	&.fill, &.not-filled:focus, &.not-filled:hover {
-		background-color: var(--color-light-green);
+		background-color: var(--color-light-blue);
 		color: var(--color-dark-gray);
 		font-weight: 700;		
 	}
 
 	&.not-filled, &.fill:hover, &.fill:focus {
 		background-color: transparent;
-		color: var(--color-light-green);
+		color: var(--color-light-blue);
 		font-weight: 400;
 	}
 }
@@ -111,7 +111,7 @@ body {
 
 	&::-webkit-scrollbar-thumb
 	{
-		background-color: var(--color-light-green);	
+		background-color: var(--color-light-blue);	
 	}
 }
 
@@ -179,7 +179,7 @@ body {
 					li {
 						&.active {
 							a {
-								color: var(--color-light-green);
+								color: var(--color-light-blue);
 							}
 						}
 
@@ -220,7 +220,7 @@ body {
 
 						&.active {
 							a {
-								color: var(--color-light-green);
+								color: var(--color-light-blue);
 							}
 						}
 						
@@ -464,7 +464,7 @@ body {
 							filter: unset;
 						}
 						50% { 
-							filter: drop-shadow(0px 0px .4rem var(--color-light-green));
+							filter: drop-shadow(0px 0px .4rem var(--color-light-blue));
 						}
 						100% { 
 							filter: unset;
@@ -475,76 +475,76 @@ body {
 						0% {
 							stroke-dasharray: 8000;
 							stroke-dashoffset: 12000;
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-green)) opacity(.09);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-blue)) opacity(.09);
 							
 						}
 						5% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-green)) opacity(0);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-blue)) opacity(0);
 							
 						}
 						10% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-green)) opacity(.09);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-blue)) opacity(.09);
 						}
 						15% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-green)) opacity(0);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-blue)) opacity(0);
 						}
 						20% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-green)) opacity(.09);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-blue)) opacity(.09);
 						}
 						25% {
 							
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-green)) opacity(0);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-blue)) opacity(0);
 						}
 						30% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-green)) opacity(.09);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-blue)) opacity(.09);
 						}
 						35% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-green)) opacity(0);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-blue)) opacity(0);
 						}
 						40% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-green)) opacity(.09);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-blue)) opacity(.09);
 						}
 						45% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-green)) opacity(0);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-blue)) opacity(0);
 						}
 						50% {
 							stroke-dasharray: 2000;
 							stroke-dashoffset: 12000;
 							
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-green)) opacity(.09);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-blue)) opacity(.09);
 						}
 						55% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-green)) opacity(0);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-blue)) opacity(0);
 						}
 						60% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-green)) opacity(.09);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-blue)) opacity(.09);
 						}
 						65% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-green)) opacity(0);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-blue)) opacity(0);
 						}
 						70% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-green)) opacity(.09);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-blue)) opacity(.09);
 						}
 						75% {
 							
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-green)) opacity(0);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-blue)) opacity(0);
 						}
 						80% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-green)) opacity(.09);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-blue)) opacity(.09);
 						}
 						85% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-green)) opacity(0);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-blue)) opacity(0);
 						}
 						90% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-green)) opacity(.09);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-blue)) opacity(.09);
 						}
 						95% {
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-green)) opacity(0);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px 0rem var(--color-light-blue)) opacity(0);
 						}
 						100% {
 							stroke-dasharray: 8000;
 							stroke-dashoffset: 12000;
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-green)) opacity(.09);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-blue)) opacity(.09);
 						}
 					}
 
@@ -599,7 +599,7 @@ body {
 
 						@media screen and (max-width: $small) {
 							animation: unset;
-							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-green)) opacity(.09);
+							filter: invert(80%) sepia(85%) saturate(373%) hue-rotate(104deg) brightness(92%) contrast(95%) drop-shadow(0px 0px .25rem var(--color-light-blue)) opacity(.09);
 							stroke-dasharray: 12000;
     						stroke-dashoffset: 1000;
 						}
@@ -732,7 +732,7 @@ body {
 						left: 0;
 						width: 75%;
 						height: .1rem;
-						background-color: var(--color-light-green);
+						background-color: var(--color-light-blue);
 						left: 0;
 					}
 				}
@@ -932,7 +932,7 @@ body {
 				}
 
 				a {
-					color: var(--color-light-green);
+					color: var(--color-light-blue);
 					position: relative;
 					display: flex;
 					height: fit-content;
@@ -961,7 +961,7 @@ body {
 						top: 0;
 						height: 1rem;
 						width: 1rem;
-						color: var(--color-light-green);
+						color: var(--color-light-blue);
 						position: absolute;	
 						transform: translateX(0.2rem);
 						transition: .4s;
@@ -1116,7 +1116,7 @@ body {
 				display: inline-block;
 				font-size: 5rem;
     			font-weight: 900;
-				//background: linear-gradient(to bottom, var(--color-dark-gray) 50%,var(--color-light-green) 50%);
+				//background: linear-gradient(to bottom, var(--color-dark-gray) 50%,var(--color-light-blue) 50%);
 				//background-clip: text;
 				//-webkit-background-clip: text;
 				//color: transparent;
@@ -1204,7 +1204,7 @@ body {
 					.post-container {
 						display: flex;
 						padding: 1rem;
-						border: .3rem solid var(--color-light-green);
+						border: .3rem solid var(--color-light-blue);
 						border-radius: 1rem;
 						gap: 1rem;
 
@@ -1515,7 +1515,7 @@ body {
 				.post-container {
 					display: flex;
 					padding: 1rem;
-					border: .3rem solid var(--color-light-green);
+					border: .3rem solid var(--color-light-blue);
 					border-radius: 1rem;
 					gap: 1rem;
 					flex-direction: column;
@@ -1702,7 +1702,7 @@ body {
 			span, a {
 				display: inline-block;
 				text-decoration: none;
-				color: var(--color-light-green);
+				color: var(--color-light-blue);
 				cursor: pointer;
 				font-size: 1.6rem;
 				transition: .6s;
