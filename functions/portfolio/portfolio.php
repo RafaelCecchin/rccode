@@ -36,7 +36,7 @@
             'hierarchical'       => false,
             'menu_position'      => null,
             'menu_icon'          => 'dashicons-images-alt2',
-            'supports'           => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+            'supports'           => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields', 'comments'),
         ]);
     }
     add_action('init', 'register_portfolio_cpt', 1);
