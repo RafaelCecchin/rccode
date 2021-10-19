@@ -46,17 +46,26 @@
             // Header
             $('.header nav ul a').on('click', function(e) {
                 e.preventDefault();
-                let id = $(this).attr('href');
 
-                let targetOffset = $(id).offset().top;
+                let href = $(this).attr('href');
 
-                if (id=="#blog-home") {
-                    targetOffset += 180;
+                if (href.substr(0, 1) == "#") {
+
+                    let targetOffset = $(href).offset().top;
+
+                    if (href=="#blog-home") {
+                        targetOffset += 180;
+                    }
+                
+                    $('html, body').animate({ 
+                        scrollTop: targetOffset - 100
+                    }, 500, 'easeInOutExpo');
+
+                } else {
+                    window.location.replace(href);
                 }
-            
-                $('html, body').animate({ 
-                    scrollTop: targetOffset - 100
-                }, 500, 'easeInOutExpo');
+                
+                
             });
 
             //Botão avançar
